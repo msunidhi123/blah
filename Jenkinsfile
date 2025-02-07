@@ -26,7 +26,7 @@ pipeline {
         stage('Login to ACR') {
             steps {
                 script {
-                    sh "echo \\"$DOCKER_PASSWORD\\" | docker login $DOCKER_REGISTRY_URL -u $DOCKER_USERNAME --password-stdin"
+                    sh "echo \\"$DOCKER_PASSWORD"\\ | docker login $DOCKER_REGISTRY_URL -u $DOCKER_USERNAME --password-stdin"
                 }
             }
         }
